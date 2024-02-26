@@ -23,7 +23,7 @@ extern "C" {
 }
 
 /// The tree-sitter [`LanguageFn`] for this grammar.
-pub const LANGUAGE: LanguageFn = LanguageFn(tree_sitter_PARSER_NAME);
+pub const LANGUAGE: LanguageFn = unsafe { LanguageFn::from_raw(tree_sitter_PARSER_NAME) };
 
 /// The content of the [`node-types.json`][] file for this grammar.
 ///

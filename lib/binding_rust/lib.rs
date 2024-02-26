@@ -284,7 +284,7 @@ pub struct LossyUtf8<'a> {
 
 impl Language {
     pub fn new(builder: LanguageFn) -> Self {
-        Self(unsafe { (builder.0)() } as *mut ffi::TSLanguage)
+        Self(unsafe { (builder.into_raw())() as _ })
     }
 
     /// Get the ABI version number that indicates which version of the Tree-sitter CLI
