@@ -3,7 +3,7 @@
 //! Typically, you will use the [language][language func] function to add this language to a
 //! tree-sitter [Parser][], and then use the parser to parse some code:
 //!
-//! ```ignore
+//! ```
 //! let code = "";
 //! let mut parser = tree_sitter::Parser::new();
 //! parser.set_language(&tree_sitter_PARSER_NAME::LANGUAGE.into()).unwrap();
